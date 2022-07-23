@@ -1,5 +1,18 @@
+import { Grid } from "@mui/material/";
+
+import Button from "../components/Button";
+
 const Profile = () => {
-  return <h1>Profile Page</h1>;
+  return (
+    <>
+      <Grid container>
+        <Grid item xs={12} sx={{ height: "85vh" }}></Grid>
+        <Grid item xs={12}>
+          <Button>Inloggen</Button>
+        </Grid>
+      </Grid>
+    </>
+  );
 };
 
 export default Profile;
