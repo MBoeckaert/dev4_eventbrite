@@ -2,6 +2,9 @@ import EventImage from "./EventImage";
 import { Card, Grid, Typography, Box } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material";
 
+import ShareIcon from "@mui/icons-material/Share";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+
 const theme = createTheme({
   components: {
     MuiTypography: {
@@ -60,14 +63,14 @@ const EventOverview = (props) => {
                   </Grid>
                   <Grid item xs={2}>
                     <Typography variant="body3" component="span">
-                      Share
+                      <ShareIcon />
                     </Typography>
                   </Grid>
                   <Grid item xs={2}>
                     <Typography variant="body3" component="span">
                       {/* <FavoriteBorder /> */}
                       {/* <svg data-testid="DeleteIcon"></svg> */}
-                      Like
+                      <FavoriteBorderIcon />
                     </Typography>
                   </Grid>
                 </Grid>
