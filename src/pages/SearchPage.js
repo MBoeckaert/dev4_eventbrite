@@ -1,5 +1,5 @@
 import EventOverview from "../components/EventOverview";
-import { Stack, TextField, Input } from "@mui/material";
+import { Stack, Typography, Input } from "@mui/material";
 import { Container } from "@mui/system";
 import { blue } from "@mui/material/colors";
 
@@ -31,7 +31,7 @@ const Search = (props) => {
 
         <Input
           fullWidth
-          placeholder="Start Search..."
+          placeholder="Beginnen met zoeken..."
           inputProps={{ style: { fontSize: 40, fontWeight: 900 } }}
           sx={{
             marginBottom: 5,
@@ -39,7 +39,14 @@ const Search = (props) => {
             ":after": { borderBottomColor: "blue" },
           }}
         />
-        {/* Popular in Oost-Vl niet doen */}
+        <Typography
+          variant="h1"
+          component="div"
+          gutterBottom
+          sx={{ fontWeight: "initial" }}
+        >
+          {props.events.length} evenementen
+        </Typography>
         <Stack spacing={4}>{overviewEventsAvailable}</Stack>
       </Container>
     </>
