@@ -4,6 +4,7 @@ import Likes from "./pages/LikesPage.js";
 import Tickets from "./pages/TicketsPage";
 import Profile from "./pages/ProfilePage";
 import Layout from "./components/Layout.js";
+import OrderTickets from "./pages/OrderTickets.js";
 import { Container } from "@mui/system";
 
 import { Routes, Route } from "react-router-dom";
@@ -40,11 +41,12 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home events={dummy__events} />} />
             <Route path="/home" element={<Home events={dummy__events} />} />
-            <Route path="search" element={<Search events={dummy__events} />} />
-            <Route path="likes" element={<Likes />} />
-            <Route path="tickets" element={<Tickets />} />
-            <Route path="profile" element={<Profile />} />
+            <Route path="/search" element={<Search events={dummy__events} />} />
+            <Route path="/likes" element={<Likes />} />
+            <Route path="/tickets" element={<Tickets />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/eventInfo" element={<ClickedEventInformation />} />
+            <Route path="/orderTickets" element={<OrderTickets />} />
           </Route>
         </Routes>
       </Container>
