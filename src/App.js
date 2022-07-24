@@ -7,6 +7,7 @@ import Layout from "./components/Layout.js";
 import { Container } from "@mui/system";
 
 import { Routes, Route } from "react-router-dom";
+import ClickedEventInformation from "./pages/EventInformation.js";
 
 function App() {
   const dummy__events = [
@@ -43,6 +44,7 @@ function App() {
             <Route path="likes" element={<Likes />} />
             <Route path="tickets" element={<Tickets />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="/eventInfo" element={<ClickedEventInformation />} />
           </Route>
         </Routes>
       </Container>

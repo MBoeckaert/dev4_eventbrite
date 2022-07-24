@@ -1,6 +1,7 @@
 import EventImage from "./EventImage";
 import { Card, Grid, Typography, Box } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import ShareIcon from "@mui/icons-material/Share";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -27,9 +28,15 @@ const EventOverview = (props) => {
   const daywritten = props.date.toLocaleString("en-US", { weekday: "short" });
   const month = props.date.toLocaleString("en-US", { month: "long" });
 
+  const navigate = useNavigate();
+
   return (
     <>
-      <Card variant="outlined">
+      <Card
+        variant="outlined"
+        onClick={() => navigate("/eventInfo")}
+        sx={{ cursor: "pointer" }}
+      >
         <Grid container spacing={2}>
           <Grid item xs={4}>
             <EventImage img={props.img} />
